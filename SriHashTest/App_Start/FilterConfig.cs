@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using SriHashTest.Services;
+using System.Web;
 using System.Web.Mvc;
 
 namespace SriHashTest
@@ -8,6 +9,7 @@ namespace SriHashTest
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new AddCspHeaders());
         }
     }
 }
